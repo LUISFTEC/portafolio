@@ -621,4 +621,42 @@
                 width: 100%;
                 margin-bottom: 15px;
             }
-        }
+        } 
+/* Estilos para la página de confirmación */
+.confirmacion {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .confirmacion h1 {
+    color: #ff0000;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .confirmacion ul {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  
+  .confirmacion ul li {
+    margin-bottom: 5px;
+  }
+  
+  .confirmacion ul li strong {
+    font-weight: bold;
+  }
+  
+  .confirmacion a {
+    text-decoration: none;
+    color: #ff0000;
+  }
+  
+  .confirmacion a:hover {
+    text-decoration: underline;
+  }
+                  
+        
