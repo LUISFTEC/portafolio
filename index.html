@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="estilo.css">
+    
     <title>Luisftec Porfolio</title>
 </head>
 
@@ -17,31 +17,25 @@
         <div class="contenido">
             <header>
                 <div class="contenido-header">
-                    <h1>LUISFTEC</h1>
+                    <h1 class="letra-l">L</h1>
                     <nav id="nav" class="">
                         <ul id="links">
-                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
-                            <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a></li>
-                            <li><a href="#skills" onclick="seleccionar(this)">SKILLS</a></li>
-                            <li><a href="#proyecto" onclick="seleccionar(this)">PROYECTOS</a></li>
-                            <li><a href="#contacto" onclick="seleccionar(this)">CONTACTO</a></li>
+                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">Inicio</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">Sobre mi</a></li>
+                            <li><a href="#skills" onclick="seleccionar(this)">Skills</a></li>
+                            <li><a href="#proyecto" onclick="seleccionar(this)">Proyectos</a></li>
+                            <li><a href="#contacto" onclick="seleccionar(this)">Contacto</a></li>
                         </ul>
                     </nav>
-                    <!-- Icono del menu responsive -->
                     <div id="icono-nav" onclick="responsiveMenu()">
                         <i class="fa-solid fa-bars"></i>
                     </div>        
-                    <div class="redes">
-                        <a href="https://www.linkedin.com/in/luisftec/"target="_blank"><i class="fa-brands fa-linkedin"></i></a> 
-                        <a href="https://github.com/LUISFTEC"target="_blank"><i class="fa-brands fa-github"></i></i></a>  
-                        <a href="https://www.facebook.com/profile.php?id=100076188782938"target="_blank"><i class="fa-brands fa-facebook"></i></a>                                                                                                                            
-                    </div>
                 </div>
             </header>
             <div class="presentacion">
                 <p class="bienvenida">WELCOME</p>
                 <h2>Soy <span>Luis S. Gutierrez</span>, Student of Systems Engineering</h2>
-                <p class="descripcion">luisftec2022@gmail.com</p>
+                <p class="descripcion"><i class="fa-solid fa-envelope"></i> luisftec2022@gmail.com</p>
                 <section>
                         <a href="#proyecto">Ir a Proyectos</a>
                         <a href="https://wa.me/+51919641773" target="_blank">Contactame</a>
@@ -56,7 +50,8 @@
             <img src="img/yo.jpg" alt="Foto de Luis S Gutierrez">
         </div>
         <div class="sobremi">
-            <p class="titulo-seccion">About Me</p>
+            <div class="efecto-caja"></div> <!-- Div para el efecto de caja -->
+            <p class="titulo-seccion">Sobre Mi</p>
             <p>Soy Luis Felipe Salazar Gutiérrez, un entusiasta del desarrollo y la tecnología. A punto de completar mi
                 carrera en Ingeniería de Sistemas, mi pasión se centra en el desarrollo de soluciones innovadoras. Durante
                 mis estudios, he adquirido conocimientos en programación en Java y C++, así como en el desarrollo web
@@ -68,7 +63,6 @@
             <a download="luisftec" href="cv.pdf">Descargar CV</a>
         </div>
     </section>
-
 
     <!-- SECCION S E R V I C I O S -->
     <section id="skills">
@@ -137,7 +131,7 @@
         <div class="skill">
             <div class="info">
                 <p> <span class="lista"> </span>Html & Css</p>
-                <span class="porcentaje">70%</span>
+                <span class="porcentaje">40%</span>
             </div>
 
             <div class="barra">
@@ -147,7 +141,7 @@
         <div class="skill">
             <div class="info">
                 <p> <span class="lista"> </span>Javascript & Php</p>
-                <span class="porcentaje">40%</span>
+                <span class="porcentaje">20%</span>
             </div>
 
             <div class="barra">
@@ -157,7 +151,7 @@
         <div class="skill">
             <div class="info">
                 <p> <span class="lista"> </span>Bases de Datos</p>
-                <span class="porcentaje">50%</span>
+                <span class="porcentaje">30%</span>
             </div>
 
             <div class="barra">
@@ -167,7 +161,7 @@
         <div class="skill">
             <div class="info">
                 <p> <span class="lista"> </span>C++, JAVA & C#</p>
-                <span class="porcentaje">70%</span>
+                <span class="porcentaje">50%</span>
             </div>
 
             <div class="barra">
@@ -177,7 +171,7 @@
             <div class="skill">
                 <div class="info">
                     <p> <span class="lista"> </span>Git & XAMPP</p>
-                    <span class="porcentaje">80%</span>
+                    <span class="porcentaje">70%</span>
                 </div>
     
                 <div class="barra">
@@ -256,35 +250,64 @@
         
     </section>
 
-   <!-- SECCIÓN CONTACTO -->
+    <!-- SECCIÓN CONTACTO -->
 <section id="contacto">
-    <h3 class="titulo-seccion">ContacTAME</h3>
-    <div class="contenedor-form">
-        <form action="enviar_formulario.php" method="post">
-            <div class="fila mitad">
-                <input type="text" placeholder="Nombre Completo *" class="input-mitad" name="nombre">
-                <input type="email" placeholder="Dirección de Email" class="input-mitad" name="email">
-            </div>
-            <div class="fila">
-                <input type="text" placeholder="Tema..." class="input-full" name="tema">
-            </div>
-            <div class="fila">
-                <textarea name="mensaje" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full"></textarea>
-            </div>
-
-            <input type="submit" value="Enviar Mensaje" class="btn-enviar">
-        </form>
-    </div>
+    <div class="contenedor-contacto">
+        <div class="efecto-caja"></div> <!-- Div para el efecto de caja -->
+        <h2 class="titulo-seccion">Ponte en Contacto Conmigo</h2>
+        <div class="descripcion">
+          <p>Estoy actualmente buscando oportunidades para realizar mis prácticas y expandir mis conocimientos. Si tienes una propuesta interesante o simplemente quieres conectar, no dudes en ponerte en contacto conmigo. ¡Estaré encantado de escucharte!</p>
+        </div>
+        <div class="opciones-contacto">
+          <div class="opcion">
+            <a href="mailto:luisftec2022@gmail.com">
+              <i class="fas fa-envelope"></i>
+              <span>Envíame un correo</span>
+            </a>
+          </div>
+          <div class="opcion">
+            <a href="https://www.linkedin.com/in/luisftec">
+              <i class="fab fa-linkedin"></i>
+              <span>Conéctate en LinkedIn</span>
+            </a>
+          </div>
+          <div class="opcion">
+            <a href="https://www.facebook.com/profile.php?id=100076188782938">
+              <i class="fab fa-facebook"></i>
+              <span>Sígueme en Facebook</span>
+            </a>
+          </div>
+        </div>
+      </div>
 </section>
+<!--botón de download aquí -->
+<body>
+    <a class="btn-download1" href="#" download>CV</a>
+    <a class="btn-download" href="#" download>Curriculum</a>
+  </body>
+<!--botón de WhatsApp aquí -->
+<div class="whatsapp-button">
+    <a href="https://wa.me/+51919641773?text=¡Hola Luis Felipe! Estoy interesado en tu portafolio y me gustaría conectarme contigo para hablar sobre posibles oportunidades o proyectos. ¿Podemos tener una conversación?. ¡Espero tu respuesta!" target="_blank">
+        <img src="img/whatsapp.svg" alt="WhatsApp">
+    </a>
+</div>
+<div class="redes">
+    <a href="https://www.linkedin.com/in/luisftec/" target="_blank">
+        <img class="svg-icon" src="img/linkedin.svg" alt="LinkedIn">
+    </a> 
+    <a href="https://github.com/LUISFTEC" target="_blank">
+        <img class="svg-icon" src="img/github.svg" alt="GitHub">
+    </a>  
+    <a href="https://www.facebook.com/profile.php?id=100076188782938" target="_blank">
+        <img class="svg-icon" src="img/facebook.svg" alt="Facebook">
+    </a>
+</div>
+
     <!-- SECCION FOOTER -->
     <footer>
-        <p> | creado por luisftec (2023) | © todos los derechos reservados</p>
-        <div class="redes">
-            <a href="https://www.facebook.com/profile.php?id=100076188782938" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        </div>
+        <p>&copy; Creado por Luisftec 2023 - Todos los derechos reservados</p>
 
     </footer>
     <script src="script.js"></script>
 </body>
-
 </html>

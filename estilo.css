@@ -5,6 +5,15 @@
   box-sizing: border-box;
   font-family: "Montserrat";
 }
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1a202c;
+}
 
 html {
   scroll-behavior: smooth;
@@ -14,6 +23,7 @@ html {
 #links a {
   font-family: Arial, sans-serif; /* Cambia "Arial, sans-serif" por el tipo de letra que desees */
   font-size: 16px;
+  margin-left: 10px;
 }
 
 /* *********************/
@@ -21,15 +31,16 @@ html {
 /* *********************/
 
 #inicio {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("img/fondo-compu.jpg");
+  background: #1a202c;
   background-size: cover;
+  background-position: center;
   background-position: center center;
   height: 100vh;
 }
 
 #inicio .contenido header {
-  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  background-color: transparent;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -38,16 +49,31 @@ html {
 
 #inicio .contenido header .contenido-header {
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 
 #inicio .contenido header .contenido-header h1 {
-  text-align: left;
+  font-size: 30px;
   color: #0095ff;
+  position: relative;
+  animation: cambiarColorLetra 5s infinite;
+}
+@keyframes cambiarColorLetra {
+  0% {
+    color: #0095ff; /* Color principal */
+    transform: scale(1);
+    text-shadow: none;
+  }
+  50% {
+    color: white; /* Cambio al color blanco */
+  }
+  100% {
+    color: #0095ff; /* Vuelve al color principal */
+  }
 }
 
 #inicio .contenido header .contenido-header nav ul {
@@ -58,10 +84,11 @@ html {
 
 #inicio .contenido header .contenido-header nav ul li a {
   text-decoration: none;
+  font-size: 18px;
   color: #fff;
-  margin: 0 12px;
-  font-weight: 400;
+  font-weight: 500;
   transition: 0.5s;
+  margin-left: 35px;
 }
 
 #inicio .contenido header .contenido-header nav ul li a:hover {
@@ -74,14 +101,42 @@ html {
   display: inline-block;
   margin-left: 10px;
   transition: 0.5s;
+  border: 2px solid transparent; /* Agrega un borde transparente inicialmente */
+  outline: none; /* Elimina el borde al hacer clic */
+}
+.redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea verticalmente en el centro */
+  position: fixed; /* Mantener la posición fija */
+  bottom: 40px; /* Ajusta la distancia desde abajo según tus preferencias */
+  left: 20px; /* Ajusta la distancia desde la izquierda según tus preferencias */
+  z-index: 1000; /* Asegurarte de que esté por encima de otros elementos */
 }
 
-#inicio .contenido header .contenido-header .redes a:hover {
-  color: #0095ff;
+.redes a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 0; /* Ajusta el margen vertical según tus preferencias */
+  padding: 8px; /* Añade un poco de espacio interno alrededor del icono */
+  animation: cambioColor 3s infinite alternate; /* Aplica la animación */
+  transition: border-color 0.3s; /* Añade una transición suave al cambiar el color del borde */
 }
 
+.redes a:hover img {
+  transform: scale(1.2); /* Aumentar tamaño al pasar el mouse */
+  transition: transform 0.3s ease-in-out; /* Agregar transición suave */
+}
+
+.redes img {
+  width: 35px; /* Ajusta el tamaño de las imágenes */
+  height: auto;
+}
 #inicio .contenido header .contenido-header .seleccionado {
   color: #0095ff;
+}
+.svg-icon {
+  filter: brightness(0) invert(1);
 }
 
 #inicio .contenido .presentacion {
@@ -93,6 +148,14 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.redes a i {
+  transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+/* Cambio de color al pasar el mouse sobre los iconos */
+.redes a i:hover {
+  color: #0095ff; /* Cambia el color al pasar el mouse */
+  transform: scale(1.4); /* Aumenta el tamaño del icono */
 }
 
 #inicio .contenido .presentacion .bienvenida {
@@ -124,12 +187,11 @@ html {
   text-decoration: none;
   display: inline-block;
   margin: 25px;
-  padding: 20px 25px;
+  padding: 10px 8px;
   border: 2px solid #fff;
-  border-radius: 50px;
+  border-radius: 10px;
   color: #fff;
   font-weight: bold;
-  text-transform: uppercase;
   transition: 0.5s;
 }
 
@@ -138,9 +200,16 @@ html {
 }
 
 #icono-nav {
-  color: #fff;
+  color: #0095ff;
   display: none;
 }
+
+section {
+  position: relative;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
 /* *********************/
 /* seccion S O B R E  M I */
 /* *********************/
@@ -148,7 +217,7 @@ html {
 #sobremi {
   max-width: 1100px;
   margin: auto;
-  padding: 100px 15px;
+  padding: 250px 15px;
   color: #000000;
   display: flex;
   justify-content: center; /* Centrar el contenido horizontalmente */
@@ -163,11 +232,11 @@ html {
 }
 
 #sobremi .contenedor-foto img {
-  padding: 6px;
+  padding: 5px;
   width: 100%;
   height: auto;
-  border-radius: 20px;
-  background-color: #f3f3f3;
+  border-radius: 5px;
+  background-color: #0095ff;
 }
 
 #sobremi .sobremi {
@@ -177,10 +246,7 @@ html {
 
 #sobremi .sobremi .titulo-seccion {
   font-size: 22px;
-  /*text-transform: uppercase; -- hace mayusculas esta linia  */
-  color: #000000;
-  text-decoration: underline;
-  text-decoration-color: #d3d3d3;
+  color: #0095ff;
   text-decoration-thickness: 5px;
   text-align: center;
   margin-bottom: 20px;
@@ -189,7 +255,7 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #565656;
+  color: #ffffff;
   text-align: justify;
   margin-bottom: 20px;
 }
@@ -197,10 +263,10 @@ html {
 #sobremi .sobremi a {
   display: inline-block;
   text-decoration: none;
-  color: #000;
-  border-radius: 30px;
-  border: 1px solid #000;
-  padding: 10px 20px;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #0095ff;
+  padding: 10px 8px;
   margin-top: 30px;
   transition: 0.5s;
   text-align: center;
@@ -218,16 +284,14 @@ html {
 #skills {
   padding: 100px 15px;
   text-align: center;
-  background-color: #f3f3f3;
+  background-color: #1a202c;
 }
 
 #skills .titulo-seccion {
   text-align: center;
   font-size: 22px;
-  text-transform: uppercase;
-  color: #000000;
-  text-decoration: underline;
-  text-decoration-color: #d3d3d3;
+  text-transform: none;
+  color: #0095ff;
   text-decoration-thickness: 5px;
 }
 
@@ -289,8 +353,7 @@ html {
 /* *********************/
 
 .contenedor-skills {
-  background: linear-gradient(#3f99d9, rgba(33, 16, 16, 0.8)),
-    url("img/fondo-skills.jpg");
+  background: linear-gradient#1f1f1f;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -364,7 +427,7 @@ html {
     width: 0;
   }
   100% {
-    width: 70%;
+    width: 40%;
   }
 }
 
@@ -373,7 +436,7 @@ html {
     width: 0;
   }
   100% {
-    width: 40%;
+    width: 20%;
   }
 }
 
@@ -382,7 +445,7 @@ html {
     width: 0;
   }
   100% {
-    width: 50%;
+    width: 30%;
   }
 }
 
@@ -391,7 +454,7 @@ html {
     width: 0;
   }
   100% {
-    width: 70%;
+    width: 50%;
   }
 }
 @keyframes progreso5 {
@@ -399,7 +462,7 @@ html {
     width: 0;
   }
   100% {
-    width: 80%;
+    width: 70%;
   }
 }
 /* *********************/
@@ -408,17 +471,16 @@ html {
 
 #proyecto {
   max-width: 1100px;
-  padding: 100px 0;
+  padding: 250px 0;
   margin: auto;
 }
 
 #proyecto .titulo-seccion {
   text-align: center;
   font-size: 22px;
-  text-transform: uppercase;
-  color: #000000;
-  text-decoration: underline;
-  text-decoration-color: #d3d3d3;
+  text-transform: none;
+  color: #ffffff;
+
   text-decoration-thickness: 5px;
 }
 
@@ -469,89 +531,173 @@ html {
 /* *********************/
 
 #contacto {
-  padding: 100px 15px;
-  background-color: #f3f3f3;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 50px;
+  position: relative; /* Posición relativa para ser referencia */
+  padding-bottom: 200px; /* Ajusta según el tamaño de la caja */
 }
 
-#contacto .titulo-seccion {
-  margin-bottom: 20px;
-}
-
-#contacto .contenedor-form {
+.contenedor-contacto {
   max-width: 1100px;
   margin: auto;
 }
 
-#contacto .contenedor-form .fila {
-  margin-bottom: 15px;
+.contenedor-contacto {
+  border-radius: 10px;
+  padding: 100px 0;
+  animation: animarCaja 2.5s infinite alternate; /* Aplica la animación */
+  position: relative; /* Añade esta propiedad para que el posicionamiento funcione */
+  z-index: 1;
 }
 
-#contacto .contenedor-form .mitad {
-  display: flex;
-  justify-content: space-between;
-}
-
-#contacto .contenedor-form input,
-#contacto .contenedor-form textarea {
-  padding: 20px;
-  border-radius: 20px;
-  border: none;
-  border: 1px solid #919191;
-}
-
-#contacto .contenedor-form .mitad input {
-  width: 48%;
-}
-
-#contacto .contenedor-form .input-full {
-  width: 100%;
+@keyframes animarCaja {
+  0% {
+    box-shadow: 0px 0px 0px 0px #0095ff; /* Sin sombra al principio */
+  }
+  100% {
+    box-shadow: 0px 0px 20px 10px #0095ff; /* Mayor sombra al final */
+  }
 }
 
 #contacto .titulo-seccion {
-  text-align: center;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #000000;
-  text-decoration: underline;
-  text-decoration-color: #d3d3d3;
-  text-decoration-thickness: 5px;
+  font-size: 50px;
+  color: #0095ff;
+  margin-bottom: 20px;
+  text-transform: none; /* Evita que el texto se convierta en mayúsculas */
 }
 
-#contacto .btn-enviar {
+.descripcion {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.opciones-contacto {
+  display: flex;
+  justify-content: center;
+}
+
+.opcion {
+  margin: 0 20px;
+}
+
+.opcion a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.opcion a:hover {
+  color: #0095ff;
+}
+
+.opcion i {
+  font-size: 24px;
+  margin-bottom: 10px;
   display: block;
-  margin: auto;
-  cursor: pointer;
-  transition: 0.5s;
-  padding: 10px 15px !important;
 }
 
-#contacto .btn-enviar:hover {
-  background-color: #0095ff;
-  color: #fff;
+.opcion span {
+  font-size: 16px;
+  font-weight: bold;
 }
+
+.btn-download {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #0074c9;
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-download1 {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #0074c9;
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 40px; /* Ajusta la distancia desde abajo según tus preferencias */
+  right: 20px; /* Ajusta la distancia desde la izquierda según tus preferencias */
+  z-index: 1000;
+  animation: bounceDownAndFloat 1.5s ease-in-out infinite;
+}
+.whatsapp-button img {
+  width: 60px;
+  height: auto;
+}
+@keyframes bounceDownAndFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(15px); /* Ajusta la distancia de bajada rápida */
+  }
+  70% {
+    transform: translateY(0);
+  }
+}
+
 /* *********************/
 /* seccion F O O T E R */
 /* *********************/
 footer {
-  background-color: #000;
+  background-color: #333a42;
   color: #fff;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
 }
-footer p {
-  padding: 5px;
-}
 
-footer a {
-  text-decoration: none;
-  color: #fff;
-  display: inline-block;
-  margin: 5px;
-  font-size: 26px;
+@media screen and (min-width: 992px) {
+  .btn-download1 {
+    display: none;
+  }
 }
 
 /* *********************/
@@ -560,36 +706,89 @@ footer a {
 
 @media screen and (max-width: 800px) {
   .redes {
-    display: none;
+    display: none; /* Ocultar en el modo responsive */
   }
+
   nav {
     display: none;
   }
   nav.responsive {
     display: block;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #333a42;
     width: 100%;
-    position: absolute;
-    top: 48px;
+    position: fixed;
+    top: 37px;
     left: 0;
-    padding: 10px 0;
+    padding: 5px 0;
   }
   nav.responsive ul {
-    display: block !important;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: -28px;
   }
   nav.responsive ul li {
-    margin: 5px 0;
+    margin: 8px 0;
   }
+
+  .btn-download {
+    display: none;
+  }
+
   #icono-nav {
     display: block;
+    position: absolute;
+    top: 10px; /* Ajusta el valor según tus preferencias */
+    right: 20px; /* Alinea el icono a la derecha */
+    transform: none; /* Elimina cualquier transformación anterior */
+    z-index: 1000; /* Ajusta el z-index para asegurarte de que esté por encima de otros elementos */
   }
-  #inicio .contenido .presentacion h2 {
-    font-size: 40px;
+  #inicio .contenido header .contenido-header h1 {
+    /* ... (otros estilos) ... */
+    margin-right: 50px; /* Ajusta el valor según tus preferencias */
   }
+
+  #inicio .contenido .presentacion a {
+    /* ... (otros estilos) ... */
+    display: block;
+    margin: 10px auto; /* Añadir margen automático para centrar horizontalmente */
+  }
+  #sobremi .sobremi {
+    /* ... (otros estilos) ... */
+    padding: 0 20px; /* Agregar un margen horizontal para alejar el texto de los bordes */
+    max-width: 800px; /* Ajustar el ancho máximo del contenedor de texto */
+    margin: 0 auto; /* Centrar el contenedor de texto */
+    text-align: justify; /* Justificar el texto para un mejor aspecto */
+  }
+  #sobremi .sobremi a {
+    display: block;
+    margin: 0 auto;
+    max-width: 40%;
+  }
+
+  /* Estilos para la sección Skills en versión móvil */
+  #skills .fila {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las habilidades se acomoden en varias filas */
+    justify-content: center; /* Centra las habilidades horizontalmente */
+    margin: 5px 0; /* Ajusta el valor para reducir el espacio entre las filas */
+  }
+
+  #skills .fila .skills {
+    width: calc(
+      50% - 10px
+    ); /* Ocupa la mitad del ancho con un pequeño espacio entre las habilidades */
+    margin: 10px; /* Espacio entre las habilidades */
+  }
+
+  #skills .fila .skills h4 {
+    font-size: 18px; /* Ajusta el tamaño del título en móvil */
+    margin-bottom: 15px;
+  }
+
   /* seccion SOBRE MI */
   #sobremi {
-    padding: 50px 0;
+    padding: 100px 0;
+    margin-top: 50px;
     display: block;
   }
   #sobremi .contenedor-foto {
@@ -616,10 +815,11 @@ footer a {
 
   /* seccion MIS SERVICIOS */
   #skills {
-    padding: 100px 15px;
-    background-color: #0095ff;
+    padding: 150px 15px;
+    background-color: #1a202c;
+    margin-top: 150px;
   }
-  #skillss .fila {
+  #skills .fila {
     display: block;
   }
   #skills .fila .skills {
@@ -632,6 +832,7 @@ footer a {
   /* seccion PROYECTO */
   #proyecto {
     padding: 50px 0;
+    margin-top: 100px;
   }
   #proyecto .fila {
     display: block;
@@ -642,6 +843,7 @@ footer a {
   /* seccion CONTACTO */
   #contacto {
     padding: 50px 15px;
+    margin-top: 50px;
   }
   #contacto .contenedor-form .mitad {
     margin-bottom: 15px;
@@ -651,40 +853,4 @@ footer a {
     width: 100%;
     margin-bottom: 15px;
   }
-}
-/* Estilos para la página de confirmación */
-.confirmacion {
-  margin-top: 50px;
-  padding: 20px;
-  background-color: #f3f3f3;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.confirmacion h1 {
-  color: #ff0000;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.confirmacion ul {
-  list-style: none;
-  margin-bottom: 10px;
-}
-
-.confirmacion ul li {
-  margin-bottom: 5px;
-}
-
-.confirmacion ul li strong {
-  font-weight: bold;
-}
-
-.confirmacion a {
-  text-decoration: none;
-  color: #ff0000;
-}
-
-.confirmacion a:hover {
-  text-decoration: underline;
 }
