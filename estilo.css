@@ -200,8 +200,9 @@ html {
 }
 
 #icono-nav {
-  color: #0095ff;
+  color: rgb(255, 255, 255);
   display: none;
+  font-size: 24px;
 }
 
 section {
@@ -735,12 +736,7 @@ footer {
   }
 
   #icono-nav {
-    display: block;
-    position: absolute;
-    top: 10px; /* Ajusta el valor según tus preferencias */
-    right: 20px; /* Alinea el icono a la derecha */
-    transform: none; /* Elimina cualquier transformación anterior */
-    z-index: 1000; /* Ajusta el z-index para asegurarte de que esté por encima de otros elementos */
+    display: flex;
   }
   #inicio .contenido header .contenido-header h1 {
     /* ... (otros estilos) ... */
