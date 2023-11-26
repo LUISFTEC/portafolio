@@ -2,295 +2,249 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="estilo.css">
-    
-    <title>Luisftec Porfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio luis</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="img/reparar.png">
+    <link rel="stylesheet" type="text/css" href="plantilla.css">
+    <link rel="stylesheet" type="text/css" href="CSS/stylesinicio.css">
+    <link rel="stylesheet" type="text/css" href="CSS/stylessobremi.css">
+    <link rel="stylesheet" type="text/css" href="CSS/stylesskills.css">
+    <link rel="stylesheet" type="text/css" href="CSS/stylesproyecto.css">
+    <link rel="stylesheet" type="text/css" href="CSS/botonwhasap.css">
+    <link rel="stylesheet" type="text/css" href="CSS/contacto.css">
+    <link rel="stylesheet" type="text/css" href="CSS/redesvertical.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
-    <!-- SECCION I N I C I O -->
-    <section id="inicio">
-        <div class="contenido">
-            <header>
-                <div class="contenido-header">
-                    <h1 class="letra-l">L</h1>
-                    <nav id="nav" class="">
-                        <ul id="links">
-                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">Inicio</a></li>
-                            <li><a href="#sobremi" onclick="seleccionar(this)">Sobre mi</a></li>
-                            <li><a href="#skills" onclick="seleccionar(this)">Skills</a></li>
-                            <li><a href="#proyecto" onclick="seleccionar(this)">Proyectos</a></li>
-                            <li><a href="#contacto" onclick="seleccionar(this)">Contacto</a></li>
-                        </ul>
-                    </nav>
-                    <div id="icono-nav" onclick="responsiveMenu()">
-                        <i class="fa-solid fa-bars"></i>
-                    </div>        
-                </div>
-            </header>
-            <div class="presentacion">
-                <p class="bienvenida">WELCOME</p>
-                <h2>Soy <span>Luis S. Gutierrez</span>, Student of Systems Engineering</h2>
-                <p class="descripcion"><i class="fa-solid fa-envelope"></i> luisftec2022@gmail.com</p>
-                <section>
-                        <a href="#proyecto">Ir a Proyectos</a>
-                        <a href="https://wa.me/+51919641773" target="_blank">Contactame</a>
-                </section>                
-            </div>
-        </div>
-    </section>
+    <nav id="miBarraNavegacion">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="index.html" class="enlace">LUISFTEC</a>
+        <ul id="menu">
+            <li><a class="active" href="#inicio">Inicio</a></li>
+            <li><a href="#sobremi">Sobre mi</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#proyecto">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="https://www.instagram.com/luisftec/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </nav>
+  <!-- Sección de Inicio -->
 
-    <!-- SECCION S O B R E M I -->
-    <section id="sobremi">
-        <div class="contenedor-foto">
-            <img src="img/yo.jpg" alt="Foto de Luis S Gutierrez">
-        </div>
-        <div class="sobremi">
-            <div class="efecto-caja"></div> <!-- Div para el efecto de caja -->
-            <p class="titulo-seccion">Sobre Mi</p>
-            <p>Soy Luis Felipe Salazar Gutiérrez, un entusiasta del desarrollo y la tecnología. A punto de completar mi
-                carrera en Ingeniería de Sistemas, mi pasión se centra en el desarrollo de soluciones innovadoras. Durante
-                mis estudios, he adquirido conocimientos en programación en Java y C++, así como en el desarrollo web
-                utilizando tecnologías como HTML, CSS, PHP y el uso de bases de datos con SQLite. Además, he trabajado con
-                XAMPP para crear y administrar entornos de desarrollo local. Como parte de mi experiencia, he creado una
-                aplicación de mascotas que está disponible en mi repositorio personal. Estoy emocionado por seguir creciendo
-                en el campo del desarrollo y aplicar mis habilidades en proyectos desafiantes y en constante evolución.</p>
-            <p>Lo que más me gusta es ser autodidacta.</p>
-            <a download="luisftec" href="cv.pdf">Descargar CV</a>
-        </div>
-    </section>
+  <section id="inicio">
+     <div class="presentacion">
+    <p class="bienvenida">WELCOME</p>
+    <h2>Soy <span>Luis S. Gutierrez</span>, Student of Systems Engineering</h2>
+    <p class="descripcion">
+        <a href="mailto:luisftec2022@gmail.com" class="correo">
+            <i class="fa-solid fa-envelope"></i> luisftec2022@gmail.com
+        </a>
+    </p>
+    <section class="botones">
+        <a href="#proyecto" class="boton">Ir a Proyectos</a>
+        <a href="https://wa.me/+51919641773" target="_blank" class="boton">Contactame</a>
+    </section>                
+</div>
+  </section>
+ 
 
-    <!-- SECCION S E R V I C I O S -->
-    <section id="skills">
-        <div class="contenedor-form">
-            <h3 class="titulo-seccion">SKILLS</h3>
-        <div class="fila">
-            <div class="skills">
-                <img src="img/html5.svg" alt="" width="100" height="100">
-                <h4>HTML5</h4>
-            </div>
-            <div class="skills">
-                <img src="img/css3.svg" alt="" width="100" height="100">
-                <h4>CSS3</h4>
-            </div>
-            <div class="skills">
-                <img src="img/javascript.svg" alt="" width="100" height="100">
-                <h4>JS</h4>
-            </div>
-            <div class="skills">
-                <img src="img/java.svg" alt="" width="100" height="100">
-                <h4>JAVA</h4>
-            </div>
-            <div class="skills">
-                <img src="img/cshar.svg" alt="" width="100" height="100">
-                <h4>C#</h4>
-            </div>
-            <div class="skills">
-                <img src="img/cpp.svg" alt="" width="100" height="100">
-                <h4>C++</h4>
-            </div>
-            
-        </div>
-        <div class="fila">
-            <div class="skills">
-                <img src="img/php.svg" alt="" width="100" height="100">
-                <h4>PHP</h4>
-            </div>
-            <div class="skills">
-                <img src="img/sqlite.svg" alt="" width="100" height="100">
-                <h4>SQLite</h4>
-            </div>
-            <div class="skills">
-                <img src="img/XAMPP.svg" alt="" width="100" height="100">
-                <h4>XAMPP</h4>
-            </div>
-            <div class="skills">
-                <img src="img/android.svg" alt="" width="100" height="100">
-                <h4>AS</h4>
-            </div>
-            <div class="skills">
-                <img src="img/unity.svg" alt="" width="100" height="100">
-                <h4>UNITY</h4>
-            </div>
-            <div class="skills">
-                <img src="img/git.svg" alt="" width="100" height="100">
-                <h4>GIT</h4>
-            </div>
-        </div>
-        </div>
-        
-    </section>
 
-    <!-- SECCION H A B I L I D A D E S -->
-    <div class="contenedor-skills" id="skills">
-        <h3>HABILIDADES </h3>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>Html & Css</p>
-                <span class="porcentaje">40%</span>
-            </div>
-
-            <div class="barra">
-                <div class="" id="html"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>Javascript & Php</p>
-                <span class="porcentaje">20%</span>
-            </div>
-
-            <div class="barra">
-                <div class="" id="js"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>Bases de Datos</p>
-                <span class="porcentaje">30%</span>
-            </div>
-
-            <div class="barra">
-                <div class="" id="bd"></div>
-            </div>
-        </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="lista"> </span>C++, JAVA & C#</p>
-                <span class="porcentaje">50%</span>
-            </div>
-
-            <div class="barra">
-                <div class="" id="ps"></div>
-            </div>
-            
-            <div class="skill">
-                <div class="info">
-                    <p> <span class="lista"> </span>Git & XAMPP</p>
-                    <span class="porcentaje">70%</span>
-                </div>
-    
-                <div class="barra">
-                    <div class="" id="pr"></div>
-                </div>
-        </div>
+ <!-- SECCION S O B R E M I -->
+ <section id="sobremi">
+    <div class="contenedor-foto">
+        <img src="img/yo.png" alt="Foto de Luis S Gutierrez">
     </div>
 
-    <!-- SECCION PORTAFOLIO -->
-    <section id="proyecto">
-        <h3 class="titulo-seccion">PROYECTOS</h3>
-        <div class="fila">
-            <div class="proyecto0">
-                <a href="https://github.com/LUISFTEC/VeterinariaApp" target="_blank">
-                <div class="overlay"></div>
-                <img src="img/proyecto1.jpg" alt="">
-                <div class="info">
-                    <h4>VeterinariaApp</h4>
-                    <p>Aplicación móvil de veterinaria con registro y uso de mapas</p>
-                </div>
-                </a>
-            </div>
-            <div class="proyecto0">
-                <a href="https://github.com/LUISFTEC/portafolio" target="_blank">
-                <div class="overlay"></div>
-                <img src="img/proyecto2.jpg" alt="">
-                <div class="info">
-                    <h4>Portfolio</h4>
-                    <p>Diseño de mi portafolio</p>
-                </div>
-                </a>
-            </div>
-            <div class="proyecto0">
-                <a href="" target="_blank">
-                <div class="overlay"></div>
-                <img src="img/proyectoVacio.jpg" alt="">
-                <div class="info">
-                    <h4>proyecto3</h4>
-                    <p></p>
-                </div>
-                </a>
-            </div>
+    <div class="texto-sobremi caja-transparente">
+        <!-- Todo tu contenido de texto aquí -->
+        <div class="texto-sobremi">
+        <p class="titulo-seccion">Sobre Mi</p>
+        <p>Soy Luis Felipe Salazar Gutiérrez, un apasionado del desarrollo y la
+            tecnología, cerca de concluir mis estudios en Ingeniería de Sistemas en
+            la Universidad Privada del Norte, Perú. Especializado en el desarrollo de
+            soluciones tecnológicas innovadoras, tengo habilidades en
+            programación (Java, C++, C#), desarrollo web (HTML, CSS, PHP), y
+            manejo de bases de datos (SQLite). Mi experiencia se centra en
+            proyectos personales que incluyen el desarrollo de una aplicación móvil
+            para la gestión de mascotas, juegos básicos tipo shooter y la creación de
+            un portafolio web en desarrollo.</p>
+        <p>Lo que más me gusta es ser autodidacta.</p>
+        <a download="luisftec" href="cv.pdf" class="boton">Descargar CV</a>
+    </div>
+    </div>
+    
+</section>
+
+
+ <!-- SECCION S K I L L S -->
+ <section id="skills">
+    <div class="contenedor-form">
+        <h3 class="titulo-seccion">SKILLS</h3>
+    <div class="fila">
+        <div class="skills">
+            <img src="img/html5.svg" alt="" width="100" height="100">
+            <h4>HTML5</h4>
         </div>
-        <div class="fila">
-            <div class="proyecto0">
-                <a href="" target="_blank">
-                <div class="overlay"></div>
-                <img src="img/proyectoVacio.jpg" alt="">
-                <div class="info">
-                    <h4>proyecto4</h4>
-                    <p></p>
-                </div>
-                </a>
-            </div>
-             <div class="proyecto0">
-                <a href="" target="_blank">
-                <div class="overlay"></div>
-                <img src="img/proyectoVacio.jpg" alt="">
-                <div class="info">
-                    <h4>proyecto5</h4>
-                    <p></p>
-                </div>
-                </a>
-            </div>
-            <div class="proyecto0">
-                <a href="" target="_blank">
-                <div class="overlay"></div>
-                <img src="img/proyectoVacio.jpg" alt="">
-                <div class="info">
-                    <h4>proyecto6</h4>
-                    <p></p>
-                </div>
-                </a>
-            </div>
+        <div class="skills">
+            <img src="img/css3.svg" alt="" width="100" height="100">
+            <h4>CSS3</h4>
+        </div>
+        <div class="skills">
+            <img src="img/javascript.svg" alt="" width="100" height="100">
+            <h4>JS</h4>
+        </div>
+        <div class="skills">
+            <img src="img/java.svg" alt="" width="100" height="100">
+            <h4>JAVA</h4>
+        </div>
+        <div class="skills">
+            <img src="img/cshar.svg" alt="" width="100" height="100">
+            <h4>C#</h4>
+        </div>
+        <div class="skills">
+            <img src="img/cpp.svg" alt="" width="100" height="100">
+            <h4>C++</h4>
         </div>
         
-    </section>
-
-    <!-- SECCIÓN CONTACTO -->
-<section id="contacto">
-    <div class="contenedor-contacto">
-        <div class="efecto-caja"></div> <!-- Div para el efecto de caja -->
-        <h2 class="titulo-seccion">Ponte en Contacto Conmigo</h2>
-        <div class="descripcion">
-          <p>Estoy actualmente buscando oportunidades para realizar mis prácticas y expandir mis conocimientos. Si tienes una propuesta interesante o simplemente quieres conectar, no dudes en ponerte en contacto conmigo. ¡Estaré encantado de escucharte!</p>
+    </div>
+    <div class="fila">
+        <div class="skills">
+            <img src="img/php.svg" alt="" width="100" height="100">
+            <h4>PHP</h4>
         </div>
-        <div class="opciones-contacto">
-          <div class="opcion">
-            <a href="mailto:luisftec2022@gmail.com">
-              <i class="fas fa-envelope"></i>
-              <span>Envíame un correo</span>
-            </a>
-          </div>
-          <div class="opcion">
-            <a href="https://www.linkedin.com/in/luisftec">
-              <i class="fab fa-linkedin"></i>
-              <span>Conéctate en LinkedIn</span>
-            </a>
-          </div>
-          <div class="opcion">
-            <a href="https://www.facebook.com/profile.php?id=100076188782938">
-              <i class="fab fa-facebook"></i>
-              <span>Sígueme en Facebook</span>
-            </a>
-          </div>
+        <div class="skills">
+            <img src="img/sqlite.svg" alt="" width="100" height="100">
+            <h4>SQLite</h4>
         </div>
-      </div>
+        <div class="skills">
+            <img src="img/XAMPP.svg" alt="" width="100" height="100">
+            <h4>XAMPP</h4>
+        </div>
+        <div class="skills">
+            <img src="img/android.svg" alt="" width="100" height="100">
+            <h4>AS</h4>
+        </div>
+        <div class="skills">
+            <img src="img/unity.svg" alt="" width="100" height="100">
+            <h4>UNITY</h4>
+        </div>
+        <div class="skills">
+            <img src="img/git.svg" alt="" width="100" height="100">
+            <h4>GIT</h4>
+        </div>
+    </div>
+    </div>
+    
 </section>
-<!--botón de download aquí -->
-<body>
-    <a class="btn-download1" href="cv.pdf" download>CV</a>
-    <a class="btn-download" href="cv.pdf" download>Curriculum</a>
-  </body>
-<!--botón de WhatsApp aquí -->
+
+
+<!-- SECCION P R O Y E C T O -->
+<section id="proyecto">
+    <h3 class="titulo-seccion">PROYECTOS</h3>
+    <div class="fila">
+        <div class="proyecto0">
+            <a href="https://github.com/LUISFTEC/VeterinariaApp" target="_blank">
+            <div class="overlay"></div>
+            <img src="img/proyecto1.jpg" alt="">
+            <div class="info">
+                <h4>VeterinariaApp</h4>
+                <p>Aplicación móvil de veterinaria con registro y uso de mapas</p>
+            </div>
+            </a>
+        </div>
+        <div class="proyecto0">
+            <a href="https://github.com/LUISFTEC/portafolio" target="_blank">
+            <div class="overlay"></div>
+            <img src="img/proyecto2.jpg" alt="">
+            <div class="info">
+                <h4>Portfolio</h4>
+                <p>Diseño de mi portafolio</p>
+            </div>
+            </a>
+        </div>
+        <div class="proyecto0">
+            <a href="" target="_blank">
+            <div class="overlay"></div>
+            <img src="img/proyectoVacio.jpg" alt="">
+            <div class="info">
+                <h4>proyecto3</h4>
+                <p></p>
+            </div>
+            </a>
+        </div>
+    </div>
+    <div class="fila">
+        <div class="proyecto0">
+            <a href="" target="_blank">
+            <div class="overlay"></div>
+            <img src="img/proyectoVacio.jpg" alt="">
+            <div class="info">
+                <h4>proyecto4</h4>
+                <p></p>
+            </div>
+            </a>
+        </div>
+         <div class="proyecto0">
+            <a href="" target="_blank">
+            <div class="overlay"></div>
+            <img src="img/proyectoVacio.jpg" alt="">
+            <div class="info">
+                <h4>proyecto5</h4>
+                <p></p>
+            </div>
+            </a>
+        </div>
+        <div class="proyecto0">
+            <a href="" target="_blank">
+            <div class="overlay"></div>
+            <img src="img/proyectoVacio.jpg" alt="">
+            <div class="info">
+                <h4>proyecto6</h4>
+                <p></p>
+            </div>
+            </a>
+        </div>
+    </div>
+    
+</section>
+
+
+<!-- SECCION C O N T A C T O -->
+
+
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Si deseas ponerte en contacto, utiliza el siguiente formulario:</p>
+  
+    <form action="https://formspree.io/f/mpzgbeyd" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" required>
+  
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" name="correo" required>
+  
+      <label for="mensaje">Mensaje:</label>
+      <textarea name="mensaje" required></textarea>
+  
+      <button type="submit" class="boton" >Enviar</button>
+    </form>
+  </section>
+
 <div class="whatsapp-button">
     <a href="https://wa.me/+51919641773?text=¡Hola Luis Felipe! Estoy interesado en tu portafolio y me gustaría conectarme contigo para hablar sobre posibles oportunidades o proyectos. ¿Podemos tener una conversación?. ¡Espero tu respuesta!" target="_blank">
         <img src="img/whatsapp.svg" alt="WhatsApp">
     </a>
 </div>
+
+
 <div class="redes">
     <a href="https://www.linkedin.com/in/luisftec/" target="_blank">
         <img class="svg-icon" src="img/linkedin.svg" alt="LinkedIn">
@@ -303,11 +257,45 @@
     </a>
 </div>
 
-    <!-- SECCION FOOTER -->
-    <footer>
-        <p>&copy; Creado por Luisftec 2023 - Todos los derechos reservados</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Contacto</h4>
+          <p>Correo: luisftec@gmail.com</p>
+          <p>Teléfono: (xxx) 000 000 000 </p>
+        </div>
+        <div class="col-md-4">
+          <h4>Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#sobremi">Acerca de Mi</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Sígueme en  mis Redes Sociales</h4>
+          <ul class="social-icons">
+            <li><a href="https://www.facebook.com/tu-pagina-de-facebook" target="_blank"><i class="fab fa-facebook" style="color: #1877F2;"></i></a></li>
+            <li><a href="https://twitter.com/luisftec" target="_blank"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a></li>
+            <li><a href="https://www.instagram.com/luisftec" target="_blank"><i class="fab fa-instagram" style="color: #E4405F;"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/luisftec" target="_blank"><i class="fab fa-linkedin" style="color: #0077B5;"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+            <p class="text-center">&copy; 2023 Luisftec. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  
 
-    </footer>
-    <script src="script.js"></script>
+  
+  <script src="scriptmenu/scriptnav.js"></script>
+
 </body>
 </html>

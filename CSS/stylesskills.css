@@ -1,0 +1,109 @@
+/* *********************/
+/* seccion S K I L L S */
+/* *********************/
+#skills {
+    display: flex;
+    text-align: center;
+    background:#2c56a0;
+    height: 100vh;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #skills .titulo-seccion {
+    text-align: center;
+    font-size: 22px;
+    text-transform: none;
+    color: #ffffff;
+    text-decoration-thickness: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+  }
+  
+  #skills .fila {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1150px;
+    margin: 30px auto;
+  }
+  
+  #skills .fila .skills {
+    max-width: 350px;
+    background-color: #fff;
+    padding: 30px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+  
+  #skills .fila .skills:hover {
+    box-shadow: 5px 5px 10px #565656, -5px -5px 10px #8a8a8a;
+  }
+  
+  #skills .fila .skills .icono {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #d3d3d3;
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+  
+  #skillss .fila .skills h4 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+  
+  #skills .fila .skills hr {
+    width: 30%;
+    margin: auto;
+    color: #000;
+    margin-bottom: 25px;
+  }
+  
+  #skills .fila .skills ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  
+  #skills .fila .skills p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* Para pantallas medianas: dos habilidades por fila */
+@media (max-width: 1200px) {
+  #skills {    
+    height: auto;
+  }
+
+
+   /* Estilos para la sección Skills en versión móvil */
+   #skills .fila {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las habilidades se acomoden en varias filas */
+    justify-content: center; /* Centra las habilidades horizontalmente */
+    margin: 5px 0; /* Ajusta el valor para reducir el espacio entre las filas */
+  }
+
+  #skills .fila .skills {
+    width: calc(
+      50% - 10px
+    ); /* Ocupa la mitad del ancho con un pequeño espacio entre las habilidades */
+    margin: 10px; /* Espacio entre las habilidades */
+  }
+
+  #skills .fila .skills h4 {
+    font-size: 18px; /* Ajusta el tamaño del título en móvil */
+    margin-bottom: 15px;
+  }
+
+  
+}
+
+

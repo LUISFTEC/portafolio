@@ -1,0 +1,17 @@
+.redes {
+    position: fixed;
+    left: 10px; /* Ajusta según necesites */
+    top: 80%;
+    transform: translateY(-50%);
+    z-index: 1000; /* Para asegurar que esté sobre otros elementos */
+}
+
+.redes a {
+    display: block; /* Hace que cada enlace sea un bloque y se apile verticalmente */
+    margin-bottom: 10px; /* Espacio entre íconos */
+}
+
+.svg-icon {
+    width: 30px; /* Ajusta el tamaño según prefieras */
+    height: auto;
+}

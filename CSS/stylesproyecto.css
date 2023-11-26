@@ -1,0 +1,102 @@
+/* Estilos para la sección de proyectos */
+#proyecto {
+  text-align: center;
+  padding: 40px 0;
+  width: 100%;
+  display: flex;
+  background:#2c56a0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Título de la sección */
+#proyecto .titulo-seccion {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+/* Contenedor de filas */
+#proyecto .fila {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+}
+
+/* Estilos individuales para cada proyecto */
+#proyecto .proyecto0 {
+  width: 30%; /* Ajusta el ancho para tres elementos por fila */
+  margin: 15px; /* Espacio alrededor de cada proyecto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efectos de transición */
+  position: relative; /* Para la posición del overlay y la info */
+  overflow: hidden; /* Para contener el efecto de overlay */
+}
+
+/* Efecto hover para los proyectos */
+#proyecto .proyecto0:hover {
+  transform: translateY(-5px); /* Mueve ligeramente el proyecto hacia arriba */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+/* Estilos para las imágenes de los proyectos */
+#proyecto .proyecto0 img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease; /* Transición suave para la imagen */
+}
+
+/* Overlay para efectos sobre la imagen */
+#proyecto .proyecto0 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparencia */
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.3s ease;
+}
+
+/* Información del proyecto */
+#proyecto .proyecto0 .info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  color: white; /* Texto claro */
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.3s ease;
+}
+
+/* Efecto hover para mostrar el overlay y la info */
+#proyecto .proyecto0:hover .overlay,
+#proyecto .proyecto0:hover .info {
+  opacity: 1;
+}
+/* Media queries para diseño responsivo */
+@media (max-width: 1200px) {
+  #proyecto .proyecto0 {
+      width: 45%; /* Dos proyectos por fila en pantallas más pequeñas */
+  }
+}
+/* Media queries para diseño responsivo */
+@media (max-width: 768px) {
+  #proyecto .proyecto0 {
+      width: 75%; /* Dos proyectos por fila en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  #proyecto .proyecto0 {
+      width: 90%; /* Un proyecto por fila en pantallas muy pequeñas */
+  }
+}
