@@ -1,148 +1,184 @@
 #contacto {
-    background:#2c56a0;
-    background-size: cover;
-    display: flex;
-    color: #fff;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    height: 100vh; /* Aprovecha el 100% de la altura de la ventana */
-    text-align: center;
-    flex-direction: column; /* Coloca el contenido de forma vertical */
-    
-  }
-  
-  #contacto h2 {
-    font-size: 28px; /* Tamaño de fuente */
-    font-weight: bold; /* Peso de fuente en negrita */
-    margin-bottom: 20px; /* Margen inferior para separarlo de los servicios */
-    color: #ffffff;
-    text-decoration-thickness: 5px;
+  background: url("../fondos/arbol.jpg");
+  background-size: cover;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  height: 100vh;
+  /* Aprovecha el 100% de la altura de la ventana */
+  text-align: center;
+  flex-direction: column;
+  /* Coloca el contenido de forma vertical */
+}
+
+#contacto h2 {
+  font-size: 28px;
+  /* Tamaño de fuente */
+  font-weight: bold;
+  /* Peso de fuente en negrita */
+  margin-bottom: 20px;
+  /* Margen inferior para separarlo de los servicios */
+  color: #ffffff;
+  text-decoration-thickness: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+#contacto p {
+  font-size: 18px;
+  /* Tamaño del texto */
+  margin-bottom: 20px;
+}
+
+#contacto form {
+  width: 100%;
+  text-align: center;
+  /* Alinea el contenido del formulario */
+  width: 700px;
+  /* Ajusta el ancho según tu preferencia */
+  margin: 0 auto;
+  /* Centra horizontalmente el formulario */
+  border: 2px solid #000;
+  /* Borde negro */
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Fondo blanco con opacidad del 70% */
+  color: #010101;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#contacto label,
+#contacto input,
+#contacto textarea {
+  display: block;
+  /* Coloca cada elemento en una nueva línea */
+  margin-bottom: 10px;
+  /* Espacio entre elementos */
+}
+
+#contacto label {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  /* Hace que las etiquetas sean más visibles */
+}
+
+#contacto input,
+#contacto textarea {
+  width: 100%;
+  /* Ajusta el ancho al 100% del contenedor */
+  padding: 10px;
+  border: 1px solid #ccc;
+  /* Estilo del borde */
+  border-radius: 4px;
+}
+
+@media (max-width: 1000px) {
+  #contacto label {
+    text-align: left;
+    font-size: 16px;
     font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 7px
-    
+    /* Hace que las etiquetas sean más visibles */
   }
 
-  
-  #contacto p {
-    font-size: 18px; /* Tamaño del texto */
-    margin-bottom: 20px;
-  }
-  
   #contacto form {
     width: 100%;
-    text-align: center; /* Alinea el contenido del formulario */
-    width: 700px; /* Ajusta el ancho según tu preferencia */
-    margin: 0 auto; /* Centra horizontalmente el formulario */
-    border: 2px solid #000; /* Borde negro */
-    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con opacidad del 70% */
-    color: #010101;
+    /* El formulario ocupará el 100% del ancho del contenedor padre */
+    max-width: 650px;
+    /* Establece un ancho máximo para el formulario */
+    margin: 0 auto;
+    /* Centra horizontalmente el formulario */
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
-  #contacto label,
-  #contacto input,
-  #contacto textarea {
-    display: block; /* Coloca cada elemento en una nueva línea */
-    margin-bottom: 10px; /* Espacio entre elementos */
-  }
-  
-  #contacto label {
-    text-align: left;
-    font-size: 18px;
-    font-weight: bold; /* Hace que las etiquetas sean más visibles */
-  }
-  
-  #contacto input,
-  #contacto textarea {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    padding: 10px;
-    border: 1px solid #ccc; /* Estilo del borde */
-    border-radius: 4px;
-  }
-  
-  
-  @media (max-width: 1000px){
-
-    #contacto label {
-        text-align: left;
-        font-size: 16px;
-        font-weight: bold; /* Hace que las etiquetas sean más visibles */
-      }
-    #contacto form {
-        width: 100%; /* El formulario ocupará el 100% del ancho del contenedor padre */
-        max-width: 650px; /* Establece un ancho máximo para el formulario */
-        margin: 0 auto; /* Centra horizontalmente el formulario */
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
-  }
-  @media (max-width: 952px){
-        #contacto form {
-            width: 100%; /* El formulario ocupará el 100% del ancho del contenedor padre */
-            max-width: 600px; /* Establece un ancho máximo para el formulario */
-            margin: 0 auto; /* Centra horizontalmente el formulario */
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-          }
-  }
-  @media (max-width: 858px){
-
-        #contacto form {
-            width: 100%; /* El formulario ocupará el 100% del ancho del contenedor padre */
-            max-width: 550px; /* Establece un ancho máximo para el formulario */
-            margin: 0 auto; /* Centra horizontalmente el formulario */
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-          }
-  }
-  @media (max-width: 780px){
-
-        #contacto form {
-            width: 100%; /* El formulario ocupará el 100% del ancho del contenedor padre */
-            max-width: 500px; /* Establece un ancho máximo para el formulario */
-            margin: 0 auto; /* Centra horizontalmente el formulario */
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-          }
-      
-  }
-  @media (max-width: 550px){
-        #contacto form {
-            width: 100%; /* El formulario ocupará el 100% del ancho del contenedor padre */
-            max-width: 400px; /* Establece un ancho máximo para el formulario */
-            margin: 0 auto; /* Centra horizontalmente el formulario */
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-          }
-  }
-  
-  @media (max-width: 500px){
-    #contacto form {
-        width: 100%; /* El formulario ocupará el 100% del ancho del contenedor padre */
-        max-width: 300px; /* Establece un ancho máximo para el formulario */
-        margin: 0 auto; /* Centra horizontalmente el formulario */
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
-
 }
-@media (max-width: 350px){
-  #contacto form {
-      width: 100%; /* El formulario ocupará el 100% del ancho del contenedor padre */
-      max-width: 200px; /* Establece un ancho máximo para el formulario */
-      margin: 0 auto; /* Centra horizontalmente el formulario */
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
 
+@media (max-width: 952px) {
+  #contacto form {
+    width: 100%;
+    /* El formulario ocupará el 100% del ancho del contenedor padre */
+    max-width: 600px;
+    /* Establece un ancho máximo para el formulario */
+    margin: 0 auto;
+    /* Centra horizontalmente el formulario */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 858px) {
+  #contacto form {
+    width: 100%;
+    /* El formulario ocupará el 100% del ancho del contenedor padre */
+    max-width: 550px;
+    /* Establece un ancho máximo para el formulario */
+    margin: 0 auto;
+    /* Centra horizontalmente el formulario */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 780px) {
+  #contacto form {
+    width: 100%;
+    /* El formulario ocupará el 100% del ancho del contenedor padre */
+    max-width: 500px;
+    /* Establece un ancho máximo para el formulario */
+    margin: 0 auto;
+    /* Centra horizontalmente el formulario */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 550px) {
+  #contacto form {
+    width: 100%;
+    /* El formulario ocupará el 100% del ancho del contenedor padre */
+    max-width: 400px;
+    /* Establece un ancho máximo para el formulario */
+    margin: 0 auto;
+    /* Centra horizontalmente el formulario */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 500px) {
+  #contacto form {
+    width: 100%;
+    /* El formulario ocupará el 100% del ancho del contenedor padre */
+    max-width: 300px;
+    /* Establece un ancho máximo para el formulario */
+    margin: 0 auto;
+    /* Centra horizontalmente el formulario */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 350px) {
+  #contacto form {
+    width: 100%;
+    /* El formulario ocupará el 100% del ancho del contenedor padre */
+    max-width: 200px;
+    /* Establece un ancho máximo para el formulario */
+    margin: 0 auto;
+    /* Centra horizontalmente el formulario */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
 }

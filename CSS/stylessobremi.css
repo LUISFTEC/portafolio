@@ -1,79 +1,81 @@
 #sobremi {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:#2c56a0;
-    height: 100vh;
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../fondos/aguacristalina.jpg");
+  height: 100vh;
+  padding: 20px;
 }
 
-.contenedor-foto, .texto-sobremi {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contenedor-foto,
+.texto-sobremi {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contenedor-foto img {
-    max-width: 40%;
-    height: auto;
-    border-radius: 10px;
+  max-width: 50%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 40px;
+  border: 2px solid #cccccc; /* Borde sutil */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave y transparente */
 }
 
 .texto-sobremi {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
 }
 
 #sobremi .texto-sobremi {
-    color: #000000; /* Color general de los textos */
-    font-family: 'Arial', sans-serif; /* Tipo de letra general */
-    text-align: justify;
-    text-justify: inter-word;
+  color: #000000; /* Color general de los textos */
+  font-family: "Arial", sans-serif; /* Tipo de letra general */
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 20px;
 }
 
 #sobremi .texto-sobremi .titulo-seccion {
-    font-size: 24px; /* Tamaño del título */
-    font-weight: bold; /* Negrita para el título */
-    color: #000000; /* Color específico del título */
+  font-size: 24px; /* Tamaño del título */
+  font-weight: bold; /* Negrita para el título */
+  color: #000000; /* Color específico del título */
 }
 
 #sobremi .texto-sobremi p {
-    font-size: 18px; /* Tamaño del texto de los párrafos */
-    margin-bottom: 15px; /* Espaciado entre párrafos */
-    line-height: 1.6; /* Espaciado de línea para mejorar la legibilidad */
+  font-size: 18px; /* Tamaño del texto de los párrafos */
+  margin-bottom: 15px; /* Espaciado entre párrafos */
+  line-height: 1.6; /* Espaciado de línea para mejorar la legibilidad */
 }
-
 
 .caja-transparente {
-    background-color: rgba(255, 255, 255, 0.7); /* Blanco con transparencia */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera para profundidad */
+  background-color: rgba(255, 255, 255, 0.7); /* Blanco con transparencia */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera para profundidad */
 }
-
-
-
 
 /* Media Query para dispositivos más pequeños */
 @media (max-width: 768px) {
-    #sobremi {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        
-    }
+  #sobremi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
 
-    #sobremi {
-        flex-direction: column;
-    }
+  #sobremi {
+    flex-direction: column;
+  }
 
-    .contenedor-foto, .texto-sobremi {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
+  .contenedor-foto,
+  .texto-sobremi {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 }

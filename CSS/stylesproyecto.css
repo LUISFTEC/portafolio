@@ -4,7 +4,7 @@
   padding: 40px 0;
   width: 100%;
   display: flex;
-  background:#2c56a0;
+  background: url("../fondos/ciudadnoche.jpeg");
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -16,9 +16,9 @@
   font-size: 24px;
   margin-bottom: 20px;
   font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ffffff;
 }
 
 /* Contenedor de filas */
@@ -85,18 +85,18 @@
 /* Media queries para diseño responsivo */
 @media (max-width: 1200px) {
   #proyecto .proyecto0 {
-      width: 45%; /* Dos proyectos por fila en pantallas más pequeñas */
+    width: 45%; /* Dos proyectos por fila en pantallas más pequeñas */
   }
 }
 /* Media queries para diseño responsivo */
 @media (max-width: 768px) {
   #proyecto .proyecto0 {
-      width: 75%; /* Dos proyectos por fila en pantallas más pequeñas */
+    width: 75%; /* Dos proyectos por fila en pantallas más pequeñas */
   }
 }
 
 @media (max-width: 480px) {
   #proyecto .proyecto0 {
-      width: 90%; /* Un proyecto por fila en pantallas muy pequeñas */
+    width: 90%; /* Un proyecto por fila en pantallas muy pequeñas */
   }
 }
