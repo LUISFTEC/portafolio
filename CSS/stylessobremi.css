@@ -2,8 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../fondos/aguacristalina.jpg");
+  background: url("../fondos/aguacristalina.webp");
   height: 100vh;
+  background-size: cover;
   padding: 20px;
 }
 
@@ -37,7 +38,6 @@
   font-family: "Arial", sans-serif; /* Tipo de letra general */
   text-align: justify;
   text-justify: inter-word;
-  padding: 20px;
 }
 
 #sobremi .texto-sobremi .titulo-seccion {
@@ -48,25 +48,25 @@
 
 #sobremi .texto-sobremi p {
   font-size: 18px; /* Tamaño del texto de los párrafos */
-  margin-bottom: 15px; /* Espaciado entre párrafos */
+  margin-bottom: 10px; /* Espaciado entre párrafos */
   line-height: 1.6; /* Espaciado de línea para mejorar la legibilidad */
 }
 
 .caja-transparente {
   background-color: rgba(255, 255, 255, 0.7); /* Blanco con transparencia */
-  padding: 20px; /* Espaciado interno */
+  padding: 15px; /* Espaciado interno */
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera para profundidad */
 }
 
 /* Media Query para dispositivos más pequeños */
 @media (max-width: 768px) {
+
+
   #sobremi {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: auto;
-  }
+    padding-top: 80px; /* Espacio adicional en la parte superior */
+  padding-bottom: 80px;   }
 
   #sobremi {
     flex-direction: column;

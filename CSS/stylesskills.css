@@ -4,9 +4,10 @@
 #skills {
   display: flex;
   text-align: center;
-  background: url("../fondos/ciudad.jpg");
+  background: url("../fondos/ciudad.webp");
+  background-size: cover;
   height: 100vh;
-  padding: 20px;
+  padding: 80px;
   align-items: center;
   justify-content: center;
 }
@@ -76,10 +77,18 @@
   line-height: 22px;
 }
 
+
+.skills img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 /* Para pantallas medianas: dos habilidades por fila */
 @media (max-width: 1200px) {
   #skills {
     height: auto;
+    
   }
 
   /* Estilos para la sección Skills en versión móvil */
@@ -102,3 +111,12 @@
     margin-bottom: 15px;
   }
 }
+
+
+
+@media (max-width: 480px) {
+  #skills .fila .skills{
+    width: 100%; /* Un proyecto por fila en pantallas muy pequeñas */
+  }
+}
+

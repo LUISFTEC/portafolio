@@ -1,0 +1,25 @@
+.subir-inicio {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none; /* Quita el subrayado */
+    opacity: 0.6; /* Transparencia para que no sea muy intrusivo */
+    transition: opacity 0.3s; /* Transición suave para la opacidad */
+  }
+  
+  .subir-inicio:hover {
+    opacity: 1; /* Opacidad completa al pasar el ratón por encima */
+  }
+  
+
+/* Oculta el texto en pantallas pequeñas */
+@media (max-width: 768px) {
+    .subir-inicio .texto-subir {
+      display: none;
+    }
+  }
+  

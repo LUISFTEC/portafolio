@@ -1,11 +1,12 @@
 /* Estilos para la sección de proyectos */
 #proyecto {
   text-align: center;
-  padding: 40px 0;
+  padding: 80px 0;
   width: 100%;
   display: flex;
-  background: url("../fondos/ciudadnoche.jpeg");
+  background: url("../fondos/ciudadnoche.webp");
   align-items: center;
+  background-size: cover; 
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;

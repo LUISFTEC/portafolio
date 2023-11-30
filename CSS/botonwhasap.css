@@ -1,12 +1,12 @@
 .whatsapp-button {
   position: fixed;
-  bottom: 40px; /* Ajusta la distancia desde abajo según tus preferencias */
-  right: 20px; /* Ajusta la distancia desde la izquierda según tus preferencias */
+  bottom: 20px; /* Ajusta la distancia desde abajo según tus preferencias */
+  left: 20px; /* Ajusta la distancia desde la izquierda según tus preferencias */
   z-index: 1000;
-  animation: bounceDownAndFloat 3.5s ease-in-out infinite;
+  animation: bounceDownAndFloat 5.5s ease-in-out infinite;
 }
 .whatsapp-button img {
-  width: 60px;
+  width: 80px;
   height: auto;
 }
 @keyframes bounceDownAndFloat {
@@ -15,7 +15,7 @@
     transform: translateY(0);
   }
   30% {
-    transform: translateY(5px); /* Ajusta la distancia de bajada rápida */
+    transform: translateY(2px); /* Ajusta la distancia de bajada rápida */
   }
   70% {
     transform: translateY(0);

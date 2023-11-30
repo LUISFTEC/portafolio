@@ -1,11 +1,13 @@
 .presentacion {
   display: flex;
-  background: url("../fondos/rascacielo.jpg");
+  background: url("../fondos/rascacielo.webp");
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh; /* Ocupa toda la altura de la ventana */
   text-align: center;
+  background-size: cover;
+  padding: 20px;
 }
 
 .bienvenida {
@@ -43,6 +45,9 @@
   justify-content: center;
 }
 
+
+
+
 .boton {
   text-decoration: none;
   padding: 10px 20px;
@@ -62,4 +67,22 @@
   background-color: #ffffff; /* Fondo blanco al pasar el mouse */
   color: #34495e; /* Texto oscuro al pasar el mouse */
   border: 2px solid #34495e; /* Borde oscuro al pasar el mouse */
+}
+
+
+/* Media query para pantallas de 500px o menos */
+@media (max-width: 500px) {
+  .botones {
+    display: flex;
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+  }
+
+  .botones .boton {
+    margin-bottom: 10px; /* Añade un poco de espacio entre los botones */
+  }
+
+  .correo-texto {
+    display: none; /* Oculta el texto en pantallas pequeñas */
+  }
 }
